@@ -1,0 +1,17 @@
+Ligne;Couleur;terminus;embranchements;type de rames;automatique
+1;jaune;La Défense (Grande Arche), Château de Vincennes;non;pneu;oui
+2;bleu;Porte Dauphine, Nation;non;fer;non
+3;verte;Pont de Levallois - Bécon, Gallieni;non;fer;non
+3bis;bleu;Gambetta, Porte des Lilas;non;fer;non
+4;violette;Bagneux - Lucie Aubrac, Porte de Clignancourt;non;pneu;oui
+5;;Place d'Italie, Bobigny - Pablo Picasso;non;fer;non
+6;verte;Charle de Gaulle - Étoile, Nation;non;pneu;non
+7;;Mairie d'Ivry, Villejuif - Louis Aragon, La Courneuve - 8 Mai 1945;oui;fer;non
+7bis;verte;Louis Blanc, Pré-Saint-Gervais;non;fer;non
+8;violette;Pointe du Lac, Balard;non;fer;non
+9;;Maire de Montreui, Pont de Sèvre;non;fer;non
+10;jaune;Gare d'Austerlitz, Boulogne Pont de Saint-Cloud;non;fer;non
+11;;Châtelet, Rosny-sous-Bois;non;pneu;non
+12;verte;Mairie d'Aubervilliers, Mairie d'Issy;non;fer;non
+13;bleu;Aisnières - Gennevilliers - Les Courtilles, Saint-Denis - Université, Chatillon - Montrouge;oui;fer;non
+14;violette;Aéroport d'Orly, Saint-Denis - Pleyel;non;pneu;oui
