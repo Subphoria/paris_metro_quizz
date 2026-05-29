@@ -1,0 +1,6 @@
+Next goals :
+- Corriger le bug de e avec accents
+- dans une questions sur les terminus, une ligne à au moins 2 terminus donc pas besoin de demander au singulier
+- ajouter les vrai logos des lignes de metro, tram et rer
+- ajouter un récap de la partie en fin de partie
+- rendre le style générale plus proche du style du métro parisien, de la ratp et de idfm
