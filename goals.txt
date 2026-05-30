@@ -2,5 +2,7 @@ Next goals :
 - Corriger le bug de e avec accents
 - dans une questions sur les terminus, une ligne à au moins 2 terminus donc pas besoin de demander au singulier
 - ajouter les vrai logos des lignes de metro, tram et rer
+- afficher en gros style titre la station demander ou alors le logo de la ligne demander, puis en dessous la question puis les réponses possibles 
+- grossir les texte et l'interface sur mobile
 - ajouter un récap de la partie en fin de partie
 - rendre le style générale plus proche du style du métro parisien, de la ratp et de idfm
