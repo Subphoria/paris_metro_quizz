@@ -1,0 +1,311 @@
+/* Palette inspirée par IDFM et RATP */
+:root {
+    --idfm-blue: #001B56;
+    --idfm-light-blue: #00A3E0;
+    --ratp-green: #00A88F;
+    --bg-color: #F4F6F9;
+    --text-color: #2D3748;
+    --white: #FFFFFF;
+    --danger: #E53E3E;
+    --success: #38A169;
+    --success-bg: #C6F6D5;
+    --danger-bg: #FED7D7;
+    --warning-bg: #FEEBC8;
+    --warning-border: #DD6B20;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: 16px;
+}
+
+header {
+    background-color: var(--idfm-blue);
+    color: var(--white);
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+header nav a {
+    color: var(--idfm-light-blue);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1.5rem 1rem;
+}
+
+.card {
+    background: var(--white);
+    padding: 2rem 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    max-width: 700px;
+    width: 100%;
+    text-align: center;
+}
+
+#entity-header {
+    margin-bottom: 1.5rem;
+}
+
+.station-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--idfm-blue);
+    line-height: 1.2;
+    margin: 0;
+}
+
+#question-text {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+
+select {
+    padding: 1rem;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    border: 2px solid #E2E8F0;
+    margin-bottom: 2rem;
+    width: 100%;
+    background-color: var(--white);
+    font-weight: bold;
+    color: var(--idfm-blue);
+}
+
+button {
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+    min-height: 54px;
+}
+
+.btn-primary {
+    background-color: var(--idfm-blue);
+    color: var(--white);
+}
+
+.btn-primary:hover:not(:disabled) {
+    background-color: #00123c;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: var(--idfm-light-blue);
+    color: var(--white);
+    margin-top: 1rem;
+}
+
+.btn-secondary:hover:not(:disabled) {
+    background-color: #008ebf;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+.hidden { display: none !important; }
+
+#options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 1.5rem 0 2rem 0;
+    text-align: left;
+}
+
+#options-container.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+}
+
+.option-btn {
+    background-color: #EDF2F7;
+    color: var(--idfm-blue);
+    border: 2px solid transparent;
+    text-align: center;
+    font-weight: bold;
+}
+
+.option-btn:hover:not(:disabled) {
+    background-color: #E2E8F0;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    background-color: #EDF2F7;
+    padding: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    font-weight: 600;
+    font-size: 1.1rem;
+    min-height: 54px;
+    transition: background-color 0.2s;
+}
+
+.checkbox-label:hover {
+    background-color: #E2E8F0;
+}
+
+.checkbox-label input {
+    margin-right: 15px;
+    transform: scale(1.5);
+}
+
+.correct {
+    background-color: var(--success-bg) !important;
+    border-color: var(--success) !important;
+    color: #1a5336 !important;
+}
+
+.wrong {
+    background-color: var(--danger-bg) !important;
+    border-color: var(--danger) !important;
+    color: #742a2a !important;
+}
+
+.missed {
+    border-color: var(--warning-border) !important;
+    background-color: var(--warning-bg) !important;
+}
+
+#feedback {
+    font-weight: bold;
+    font-size: 1.2rem;
+    min-height: 28px;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.score-display {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--idfm-blue);
+    margin: 1rem 0 2rem 0;
+}
+
+#recap-container {
+    text-align: left;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.recap-item {
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 6px solid #ccc;
+    background-color: #F7FAFC;
+    font-size: 1rem;
+}
+
+.recap-item.good { border-left-color: var(--success); }
+.recap-item.bad { border-left-color: var(--danger); }
+
+.recap-q {
+    font-weight: 800;
+    color: var(--idfm-blue);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.recap-a strong { color: #4A5568; }
+.mt-2 { margin-top: 2rem; }
+
+.logo-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.logo-circle {
+    border-radius: 50%;
+    width: 2.2em;
+    height: 2.2em;
+}
+
+.logo-square {
+    border-radius: 0.35em;
+    width: 2.2em;
+    height: 2.2em;
+}
+
+.logo-large {
+    font-size: 4rem;
+    margin: 0 auto;
+    border: 3px solid var(--white);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--text-color);
+    color: #A0AEC0;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+    .card { padding: 1.5rem 1rem; }
+    .station-title { font-size: 1.8rem; }
+    #question-text { font-size: 1.15rem; margin-bottom: 1.5rem; }
+    .checkbox-label { font-size: 1rem; padding: 0.8rem; }
+    .logo-large { font-size: 3.5rem; }
+    button { padding: 0.8rem 1.5rem; }
+}
