@@ -126,8 +126,11 @@ function getLogoHTML(val, type, isLarge = false) {
     
     // Génère le lien vers ton dossier local "liste_logos_lignes"
     if (fileMap[key]) {
-        let url = `liste_logos_lignes/${fileMap[key]}`;
-        return `<img src="${url}" class="transit-logo ${sizeClass}" alt="Ligne ${val}" onerror="this.style.display='none'; this.insertAdjacentHTML('afterend', '<span style=\\'font-weight:bold;\\'>${type} ${val}</span>');" />`;
+        // L'encodage gère le "é" de "Métro" sans casser le lien
+        let fileName = encodeURIComponent(fileMap[key]);
+        let url = `liste_logos_lignes/${fileName}`;
+        
+        return `<img src="${url}" class="transit-logo ${sizeClass}" alt="Ligne ${val}" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';" /><span style="display:none; font-weight:bold;">${type} ${val}</span>`;
     } else {
         return `<span style="font-weight:bold;">${type} ${val}</span>`;
     }
