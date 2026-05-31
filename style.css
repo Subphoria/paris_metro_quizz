@@ -116,6 +116,8 @@ button:disabled { opacity: 0.6; cursor: not-allowed; transform: none !important;
     display: inline-block;
     vertical-align: middle;
     object-fit: contain;
+    width: auto; /* Essentiel pour garder les proportions des SVG */
+    max-width: 100%;
 }
 .logo-small { height: 1.8em; margin-right: 8px; }
 .logo-large {
