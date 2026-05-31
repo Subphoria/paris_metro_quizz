@@ -6,44 +6,44 @@ let score = 0;
 let questions = [];
 let gameHistory = [];
 
-// Dictionnaire des vrais SVG de Wikipédia
+// Dictionnaire des noms exacts de tes fichiers locaux
 const fileMap = {
-    "M_1": "Paris_transit_icons_-M%C3%A9tro_1.svg",
-    "M_2": "Paris_transit_icons-M%C3%A9tro_2.svg",
-    "M_3": "Paris_transit_icons-M%C3%A9tro_3.svg",
-    "M_3bis": "Paris_transit_icons-M%C3%A9tro_3bis.svg",
-    "M_4": "Paris_transit_icons-M%C3%A9tro_4.svg",
-    "M_5": "Paris_transit_icons-M%C3%A9tro_5.svg",
-    "M_6": "Paris_transit_icons-M%C3%A9tro_6.svg",
-    "M_7": "Paris_transit_icons-M%C3%A9tro_7.svg",
-    "M_7bis": "Paris_transit_icons-M%C3%A9tro_7bis.svg",
-    "M_8": "Paris_transit_icons-M%C3%A9tro_8.svg",
-    "M_9": "Paris_transit_icons-M%C3%A9tro_9.svg",
-    "M_10": "Paris_transit_icons-M%C3%A9tro_10.svg",
-    "M_11": "Paris_transit_icons-M%C3%A9tro_11.svg",
-    "M_12": "Paris_transit_icons-M%C3%A9tro_12.svg",
-    "M_13": "Paris_transit_icons-M%C3%A9tro_13.svg",
-    "M_14": "Paris_transit_icons-M%C3%A9tro_14.svg",
-    "RER_A": "Paris_transit_icons-RER_A.svg",
-    "RER_B": "Paris_transit_icons-RER_B.svg",
-    "RER_C": "Paris_transit_icons-RER_C.svg",
-    "RER_D": "Paris_transit_icons-RER_D.svg",
-    "RER_E": "Paris_transit_icons-RER_E.svg",
-    "T_1": "Paris_transit_icons-Tram_1.svg",
-    "T_2": "Paris_transit_icons-Tram_2.svg",
-    "T_3a": "Paris_transit_icons-Tram_3a.svg",
-    "T_3b": "Paris_transit_icons-Tram_3b.svg",
-    "T_4": "Paris_transit_icons-Tram_4.svg",
-    "T_5": "Paris_transit_icons-Tram_5.svg",
-    "T_6": "Paris_transit_icons-Tram_6.svg",
-    "T_7": "Paris_transit_icons-Tram_7.svg",
-    "T_8": "Paris_transit_icons-Tram_8.svg",
-    "T_9": "Paris_transit_icons-Tram_9.svg",
-    "T_10": "Paris_transit_icons-Tram_10.svg",
-    "T_11": "Paris_transit_icons-Tram_11.svg",
-    "T_12": "Paris_transit_icons-Tram_12.svg",
-    "T_13": "Paris_transit_icons-Tram_13.svg",
-    "T_14": "Paris_transit_icons-_Tram_14.svg"
+    "M_1": "Paris_transit_icons_-_Métro_1.svg",
+    "M_2": "Paris_transit_icons_-_Métro_2.svg",
+    "M_3": "Paris_transit_icons_-_Métro_3.svg",
+    "M_3bis": "Paris_transit_icons_-_Métro_3bis.svg",
+    "M_4": "Paris_transit_icons_-_Métro_4.svg",
+    "M_5": "Paris_transit_icons_-_Métro_5.svg",
+    "M_6": "Paris_transit_icons_-_Métro_6.svg",
+    "M_7": "Paris_transit_icons_-_Métro_7.svg",
+    "M_7bis": "Paris_transit_icons_-_Métro_7bis.svg",
+    "M_8": "Paris_transit_icons_-_Métro_8.svg",
+    "M_9": "Paris_transit_icons_-_Métro_9.svg",
+    "M_10": "Paris_transit_icons_-_Métro_10.svg",
+    "M_11": "Paris_transit_icons_-_Métro_11.svg",
+    "M_12": "Paris_transit_icons_-_Métro_12.svg",
+    "M_13": "Paris_transit_icons_-_Métro_13.svg",
+    "M_14": "Paris_transit_icons_-_Métro_14.svg",
+    "RER_A": "Paris_transit_icons_-_RER_A.svg",
+    "RER_B": "Paris_transit_icons_-_RER_B.svg",
+    "RER_C": "Paris_transit_icons_-_RER_C.svg",
+    "RER_D": "Paris_transit_icons_-_RER_D.svg",
+    "RER_E": "Paris_transit_icons_-_RER_E.svg",
+    "T_1": "Paris_transit_icons_-_Tram_1.svg",
+    "T_2": "Paris_transit_icons_-_Tram_2.svg",
+    "T_3a": "Paris_transit_icons_-_Tram_3a.svg",
+    "T_3b": "Paris_transit_icons_-_Tram_3b.svg",
+    "T_4": "Paris_transit_icons_-_Tram_4.svg",
+    "T_5": "Paris_transit_icons_-_Tram_5.svg",
+    "T_6": "Paris_transit_icons_-_Tram_6.svg",
+    "T_7": "Paris_transit_icons_-_Tram_7.svg",
+    "T_8": "Paris_transit_icons_-_Tram_8.svg",
+    "T_9": "Paris_transit_icons_-_Tram_9.svg",
+    "T_10": "Paris_transit_icons_-_Tram_10.svg",
+    "T_11": "Paris_transit_icons_-_Tram_11.svg",
+    "T_12": "Paris_transit_icons_-_Tram_12.svg",
+    "T_13": "Paris_transit_icons_-_Tram_13.svg",
+    "T_14": "Paris_transit_icons_-_Tram_14.svg"
 };
 
 let allTerminus = [];
@@ -124,10 +124,10 @@ function getLogoHTML(val, type, isLarge = false) {
     let key = `${type}_${val}`;
     let sizeClass = isLarge ? 'logo-large' : 'logo-small';
     
-    // Génère le lien direct vers le SVG Wikipédia
+    // Génère le lien vers ton dossier local "liste_logos_lignes"
     if (fileMap[key]) {
-        let url = "https://commons.wikimedia.org/wiki/Special:FilePath/" + fileMap[key];
-        return `<img src="${url}" class="transit-logo ${sizeClass}" alt="Ligne ${val}" />`;
+        let url = `liste_logos_lignes/${fileMap[key]}`;
+        return `<img src="${url}" class="transit-logo ${sizeClass}" alt="Ligne ${val}" onerror="this.style.display='none'; this.insertAdjacentHTML('afterend', '<span style=\\'font-weight:bold;\\'>${type} ${val}</span>');" />`;
     } else {
         return `<span style="font-weight:bold;">${type} ${val}</span>`;
     }
